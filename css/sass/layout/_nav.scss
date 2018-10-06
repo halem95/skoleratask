@@ -1,0 +1,143 @@
+
+
+.navbar-parent {
+    border: 2px solid #ddd;
+    background: #fff;
+    @media (min-width: 992px) {
+        height: 900px !important;
+    }
+    @media (max-width: 991px) {
+        height: auto !important;
+    }
+    .navbar {
+        padding: 0px;
+    }
+    .nav-row {
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 100%;
+        .navbar-brand-col {
+            padding: 20px 0px;
+            @media #{$extraLargeScreen}, #{$largeScreen} {
+                text-align: center;
+            }
+
+            @media #{$mediummobile}, #{$maxmobile}, #{$mediumScreen} {
+                padding: 20px 7px;
+                .navbar-toggler {
+                    float: right;
+                    width: 45px;
+                    height: 35px;
+                    padding: 0px;
+                    border: none;
+                    span {
+                        display: block;
+                        height: 2px;
+                        background: #036fe2;
+                        width: 90%;
+                        margin: 6px auto;
+                    }
+                }
+            }
+        };
+        .navbar-collapse-parent {
+            padding-right: 0;
+            padding-left: 0px;
+            .navbar-collapse {
+                @media (max-width: 991px) {
+                    position: fixed;
+                    left: 0px;
+                    background: rgba(#000, .9);
+                    z-index: 555;
+                    width: 100%;
+                    .nav-link {
+                        color: #fff !important;
+                    }
+                }
+            }
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+                .nav-item { 
+                    .nav-link {
+                        padding: 20px 40px;
+                        font-size: $mainFontSize + 4;
+                        transition: all .5s ease-in-out;
+                        @media #{$mediumScreen}, #{$largeScreen} {
+                            font-size: $mainFontSize - 2;
+                        }
+                        table {
+                            width: 100%;
+                            .nav-link-logo,
+                            .nav-link-arrow {
+                                width: 20%;
+                            }
+                            .nav-link-arrow {
+                                text-align: right
+                            }
+                            .nav-link-title {
+                                width: 60%;
+                                text-align: center;
+                            }
+                        }
+                        &:hover {
+                            background: #036fe2;
+                            color: #fff;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    a.nav-link.text-secondary {
+                        &:hover {
+                            background: #036fe2;
+                            color: #fff !important;
+                        }
+                    }
+                    .dropdown-menu {
+                        position: static;
+                        z-index: 0;
+                        text-align: center;
+                        border-radius: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        border: none;
+                        background: #edf4fb;
+                        .dropdown-item {
+                            padding: 20px 10px;
+                            font-size: $mainFontSize + 2;
+                            transition: all .5s ease-in-out;
+                            border-right: 5px solid transparent;
+                            &:hover {
+                                background: #b7fcf8;
+                                border-right: 5px solid #036fe2;
+                            }
+                            &:focus {
+                                background: #b7fcf8;
+                                border-right: 5px solid #036fe2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 991px) {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-right: 15px;
+        padding-left: 15px;
+        border: none;
+        border-bottom: 2px solid #ddd;
+    }
+
+}
+
+
+// .home-parent {
+//     background: #f00;
+    
+// }
+

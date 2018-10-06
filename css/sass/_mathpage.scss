@@ -1,0 +1,14 @@
+.main-layout {
+    background: #edf4fb;
+    padding-bottom: 20px;
+}
+@import 'helpers/variables';
+@import 'helpers/colors';
+@import 'helpers/mediaqueries';
+
+@import 'components/buttons';
+@import 'components/inputs';
+
+@import 'layout/nav';
+@import 'layout/header';
+
