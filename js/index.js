@@ -42,6 +42,10 @@ $(document).ready(function() {
 
     $(window).resize(function(){
 
+        $('.register-step-border').css('top', (spanHeight / 2));
+
+        $('.navbar-collapse').css('top', (navHeight + loadingBarHeight ));
+
         if ($(window).width() >= 992) {  
  
             $('.navbar-parent').height(winHeight);
