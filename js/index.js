@@ -29,11 +29,19 @@ $(document).ready(function() {
         $(this).addClass('active-register-step');
     });
 
+
+    var navbarParentHeight = 0;
+    $('.navbar-parent').each(function () {
+        if($(window).width() <= 991) {
+            navbarParentHeight = $('.navbar-parent').innerHeight();
+        }
+    });
+
     $('.navbar-parent').each(function () {
         if($(window).width() >= 992) {
             $('.navbar-parent').height($(window).height());
         } else {
-            $('.navbar-parent').height('auto');
+            $('.navbar-parent').height(navbarParentHeight);
         }
     });
 
@@ -46,7 +54,7 @@ $(document).ready(function() {
             $('.navbar-parent').height($(window).height());
  
         } else {
-            $('.navbar-parent').height('auto');
+            $('.navbar-parent').height(navbarParentHeight);
         }  
  
     });

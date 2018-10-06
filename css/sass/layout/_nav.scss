@@ -3,12 +3,6 @@
 .navbar-parent {
     border: 2px solid #ddd;
     background: #fff;
-    // @media (min-width: 992px) {
-    //     height: 900px !important;
-    // }
-    // @media (max-width: 991px) {
-    //     height: auto !important;
-    // }
     .navbar {
         padding: 0px;
     }
@@ -124,7 +118,7 @@
 
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 991.98px) {
         margin-left: -15px;
         margin-right: -15px;
         padding-right: 15px;
@@ -134,10 +128,3 @@
     }
 
 }
-
-
-// .home-parent {
-//     background: #f00;
-    
-// }
-
