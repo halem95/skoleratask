@@ -33,7 +33,7 @@ $(document).ready(function() {
         if($(window).width() >= 992) {
             $('.navbar-parent').height($(window).height());
         } else {
-            $(this).height('auto');
+            $('.navbar-parent').height('auto');
         }
     });
 
@@ -43,10 +43,10 @@ $(document).ready(function() {
 
         if ($(window).width() >= 992) {  
  
-               $('.navbar-parent').height($(window).height());
+            $('.navbar-parent').height($(window).height());
  
         } else {
-            $(this).height('auto');
+            $('.navbar-parent').height('auto');
         }  
  
     });
