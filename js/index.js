@@ -27,5 +27,31 @@ $(document).ready(function() {
     $('.register-step-number').click(function() {
         $('.register-step-number').removeClass('active-register-step');
         $(this).addClass('active-register-step');
-    })
-})
+    });
+
+    $('.navbar-parent').each(function () {
+        if($(window).width() >= 992) {
+            $('.navbar-parent').height($(window).height());
+        } else {
+            $(this).height('auto');
+        }
+    });
+
+
+
+    $(window).resize(function(){
+
+        if ($(window).width() >= 992) {  
+ 
+               $('.navbar-parent').height($(window).height());
+ 
+        } else {
+            $(this).height('auto');
+        }  
+ 
+    });
+ 
+  
+ 
+ 
+});

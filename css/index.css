@@ -36,16 +36,6 @@ button:focus {
   border: 2px solid #ddd;
   background: #fff;
 }
-@media (min-width: 992px) {
-  .navbar-parent {
-    height: 900px !important;
-  }
-}
-@media (max-width: 991px) {
-  .navbar-parent {
-    height: auto !important;
-  }
-}
 .navbar-parent .navbar {
   padding: 0px;
 }
