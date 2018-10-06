@@ -19,6 +19,7 @@ $(document).ready(function() {
     var spanHeight = $('.register-step-border').parents('.subject-register-steps').find('.register-step-number').outerHeight();
     var navHeight = $('.navbar-parent').outerHeight();
     var loadingBarHeight = $('.gradient').innerHeight();
+    var winHeight = $(window).height();
 
     $('.register-step-border').css('top', (spanHeight / 2));
 
@@ -30,31 +31,23 @@ $(document).ready(function() {
     });
 
 
-    var navbarParentHeight = 0;
-    $('.navbar-parent').each(function () {
-        if($(window).width() <= 991) {
-            navbarParentHeight = $('.navbar-parent').innerHeight();
-        }
-    });
-
     $('.navbar-parent').each(function () {
         if($(window).width() >= 992) {
-            $('.navbar-parent').height($(window).height());
+            $('.navbar-parent').height(winHeight);
         } else {
-            $('.navbar-parent').height(navbarParentHeight);
+            $('.navbar-parent').css('height', 'auto')
         }
-    });
-
+    })
 
 
     $(window).resize(function(){
 
         if ($(window).width() >= 992) {  
  
-            $('.navbar-parent').height($(window).height());
+            $('.navbar-parent').height(winHeight);
  
         } else {
-            $('.navbar-parent').height(navbarParentHeight);
+            $('.navbar-parent').css('height', 'auto')
         }  
  
     });
