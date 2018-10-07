@@ -16,14 +16,15 @@ $(document).ready(function() {
         $(this).addClass('active-tab-item');
     });
 
-    var spanHeight = $('.register-step-border').parents('.subject-register-steps').find('.register-step-number').outerHeight();
+    var spanHeight = $('.register-step-border').parents('.subject-register-steps').find('.register-step-number').outerHeight() / 2;
     var navHeight = $('.navbar-parent').outerHeight();
     var loadingBarHeight = $('.gradient').innerHeight();
+    var navCollapseTop = navHeight + loadingBarHeight;
     var winHeight = $(window).height();
 
-    $('.register-step-border').css('top', (spanHeight / 2));
+    $('.register-step-border').css('top', spanHeight);
 
-    $('.navbar-collapse').css('top', (navHeight + loadingBarHeight ));
+    $('.navbar-collapse').css('top', navCollapseTop);
 
     $('.register-step-number').click(function() {
         $('.register-step-number').removeClass('active-register-step');
@@ -31,20 +32,18 @@ $(document).ready(function() {
     });
 
 
-    $('.navbar-parent').each(function () {
         if($(window).width() >= 992) {
             $('.navbar-parent').height(winHeight);
         } else {
             $('.navbar-parent').css('height', 'auto')
         }
-    })
 
 
-    $(window).resize(function(){
+    $(window).on('resize', function(){
 
-        $('.register-step-border').css('top', (spanHeight / 2));
+        $('.register-step-border').css('top', spanHeight );
 
-        $('.navbar-collapse').css('top', (navHeight + loadingBarHeight ));
+        $('.navbar-collapse').css('top', navCollapseTop);
 
         if ($(window).width() >= 992) {  
  
