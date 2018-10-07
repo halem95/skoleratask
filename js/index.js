@@ -24,7 +24,10 @@ $(document).ready(function() {
 
     $('.register-step-border').css('top', spanHeight);
 
-    $('.navbar-collapse').css('top', navCollapseTop);
+    if( $(window).width() < 992 ) {
+        $('.navbar-collapse').css('top', navCollapseTop);
+    }
+
 
     $('.register-step-number').click(function() {
         $('.register-step-number').removeClass('active-register-step');
@@ -32,29 +35,36 @@ $(document).ready(function() {
     });
 
 
-        if($(window).width() > 991) {
-            $('.navbar-parent').height(winHeight);
-        } else {
-            $('.navbar-parent').css('height', 'auto')
-        }
+    if($(window).width() > 991) {
+        
+        $('.navbar-parent').height(winHeight);
+    } 
+    else {
+        $('.navbar-parent').css('height', 'auto')
+    }
 
 
     $(window).on('resize', function(){
 
-        $('.register-step-border').css('top', spanHeight );
+        if($(window).width() < 992) {
+            $('.register-step-border').css('top', spanHeight );
+
+        }
 
         $('.navbar-collapse').css('top', navCollapseTop);
 
         if ($(window).width() > 991) {  
  
             $('.navbar-parent').height(winHeight);
- 
-        } else {
+        }
+        else {
             $('.navbar-parent').css('height', 'auto')
         }  
  
     });
  
+
+    console.log($(window).width(), $(window).outerWidth(), $(window).innerWidth());
   
  
  
