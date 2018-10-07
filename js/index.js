@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
 
 
-        if($(window).width() >= 992) {
+        if($(window).width() > 991) {
             $('.navbar-parent').height(winHeight);
         } else {
             $('.navbar-parent').css('height', 'auto')
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
         $('.navbar-collapse').css('top', navCollapseTop);
 
-        if ($(window).width() >= 992) {  
+        if ($(window).width() > 991) {  
  
             $('.navbar-parent').height(winHeight);
  
