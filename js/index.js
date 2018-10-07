@@ -47,13 +47,13 @@ $(document).ready(function() {
     $(window).on('resize', function(){
 
         if($(window).width() < 992) {
-            $('.register-step-border').css('top', spanHeight );
-
+            $('.navbar-collapse').css('top', navCollapseTop);
         }
 
-        $('.navbar-collapse').css('top', navCollapseTop);
+        $('.register-step-border').css('top', spanHeight );
 
-        if ($(window).width() > 991) {  
+
+        if ($(window).width() >= 992) {  
  
             $('.navbar-parent').height(winHeight);
         }
